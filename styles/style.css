@@ -1,4 +1,4 @@
-h1,h2.h3,h4.h5,h6,p {
+h1,h2,h3,h4.h5,h6,p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -38,6 +38,9 @@ body {
     margin-right: auto;
 }
 
+.accent-color {
+    color: #fd9222;
+}
 
 /* Logo styles */
 .logo {
@@ -83,15 +86,17 @@ body {
 
 /* Hero styles */
 .hero {
-    background-color:#1e1823;
     color: #fff;
 }
 
 .hero-container {
+    background-color: #1e1823;
     padding-top: 381px;
     padding-bottom: 40px;
-    padding-left: 56px;
-    padding: right: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 30px;
+
 }
 
 .hero-title {
@@ -102,42 +107,95 @@ body {
     letter-spacing: -0.03em;
     margin-bottom: 32px;
 }
-
+.links-flexbox {
+    display: flex;
+    align-items: center;
+}
 .btn {
     min-width: 144px;
     background-color: #FD9222;
     color: #fff;
     font-weight: 600;
-    color: #fff;
     padding: 14px 40px;
     border: 0;
     border-radius: 100px;
+    margin-right: 14px;
+}
 
+.btn:hover,
+.btn:focus {
+    background-color: #FCF1E0;
+    color: #FD9222;
+}
+
+
+.btn-dark {
+    min-width: 183px;
+    max-height: 45px;
+    background-color: #1E1823;
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 40px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+}
+
+.btn-dark:hover,
+.btn-dark:focus {
+    background-color:#fff;
+    color: #FD9222;
+    border: 1px solid #FD9222;
 }
 
 .hero-link {
     font-weight: 600;
     font-size: 14px;
+    margin-right: auto;
 }
 
-.hero-scroll{
+.hero-scroll {
     font-weight: 600;
     font-size: 14px;
 }
 
+.hero-scroll:hover,
+.hero-scroll:focus {
+    color: #FD9222;
+} 
+
 /* Benefits section styles */
 
 .benefits {
+    margin-top: 72px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     background-color: #1e1823;
     font-size: 14px;
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.7);
+}
+.benefits-container {
+    padding: 0 34px;       
+}
+.benefits-list {
+    display: flex;
+    column-gap: 88px;
+}
+.benefits-list-item {
+    width: calc((100% - 2 * 88px) / 3);
 }
 
 .benefits-list-item .title {
     font-weight: 600;
     font-size: 18px;
     color: #fff;
+}
+
+/* Ingredient section styles */
+.ingredients-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .section-title {
@@ -147,11 +205,14 @@ body {
     letter-spacing: -0.03em;
     text-transform: uppercase;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
 }
 
-.accent-color {
-    color: #fd9222;
+.ingredients .section-title {
+    margin-bottom: 28px;
+    max-width: 411px;
 }
 
 .ingredients-text {
@@ -159,26 +220,81 @@ body {
     line-height: 1.29;
     letter-spacing: -0.02em;
     text-align: center;
+    max-width: 486px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 50px;
 }
 
+.ingredients-list {
+    display: flex;
+    column-gap: 19px;
+    flex-wrap: wrap;
+
+}
+
+
 .ingredients-list-item {
+    width: calc((100% - 3 * 19px) / 4);
     font-weight: 600;
     line-height: 1.29;
     letter-spacing: -0.02em;
     text-transform: uppercase;
+    padding: 28px 32px;
+    border-radius: 15px;
+}
+.ingredients-list-item:nth-child(4n+1) {
+    background-color: #FD9222;
+    color: #fff;
+}
+.ingredients-list-item:nth-child(4n+3) {
+    background-color: #1e1823;
+    color: #fff;
+}
+
+.ingredients-list-item:nth-child(even) {
+    border: 1px solid #FD9222;
+    background-color: #fff;
+}
+
+.ingredient-illustration {
+    margin-bottom: 36px;
+}
+
+/* How it`s made section */
+
+.made-section {
+    padding: 50px 0px;
+}
+
+.made-flexcontainer {
+    display: flex;
+    column-gap: 20px;
+}
+
+.made-list-container {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 32px;
 }
 
 .made-list-title {
+    max-width: 350px;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.33333;
+    margin-bottom: 28px;
 }
 
 .made-list {
-    line-height: 1.28571;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.28;
     letter-spacing: -0.02em;
-    list-style-type: disc;
+    row-gap: 24px;
+    padding-right: 27px;
 }
+/* Reviews section */
 
 .reviews {
     padding-top: 50px;
@@ -187,15 +303,33 @@ body {
 .reviews-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 28px;
-    line-height: 1.28571;
+    column-gap: 28px;
+    line-height: 1.28;
     letter-spacing: -0.02em;
     color: rgba(17, 17, 17, 0.7);
+    margin-bottom: 49px;
 }
 .reviews-list-item {
     width: calc((100% - 56px) / 3);
     background-color: #fff;
     text-align: center;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 15px;
+    padding: 0px 24px 24px 24px;
+}
+
+.user-photo {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+}
+
+.review-item-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33333;
+    color: #111;
+    margin-bottom: 24px;
 }
 
 .inversion {
@@ -206,24 +340,56 @@ body {
     color: #111;
 }
 
-.inversion:hover,
-.inversion:focus {
+.btn-review {
+    display: block;
+    min-width: 222px;
+    max-height: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #111;
+    border: 1px solid #fd9222;
+    border-radius: 100px;
+    padding: 14px 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-review:hover,
+.btn-review:focus {
     color: #fff;
     background-color:#FD9222;
 }
 
+/* Footer section */
+
 .footer {
     background-color: #1e1823;
     color: #fff;
+    padding: 50px 0;
 }
 
 .footer .section-title {
+    max-width: 300px;
     font-weight: 500;
     font-size: 28px;
     line-height: 1.21429;
     letter-spacing: -0.02em;
     text-align: left;
     text-transform: none;
+    margin: 0px;
+    margin-right: auto; 
+}
+
+.footer-top-flexcontainer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 78px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contacts-title {
+    font-weight: 500;
+    margin-bottom: 14px;
 }
 
 .contacts {
@@ -232,12 +398,35 @@ body {
     line-height: 1.28571;
 }    
 
-.contacts-title {
-    font-weight: 500;
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
 }
 
+.contact-link:hover,
+.contact-link:focus {
+    color: #FD9222;
+}
+.footer .nav-link{
+    padding-top: 42px;
+}
 
+/* ================================ */
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 
 
