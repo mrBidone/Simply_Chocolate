@@ -14,9 +14,13 @@
 </head>
 <body>
     <header class="page-header">
-        <div class="container">
+        <div class="container page-header-wrapper">
             <nav class="page-nav">
-                <a class="logo" href="./index.html"><span class="logo-italics">Simply</span> chocolate</a>
+                <a class="logo" href="./index.html"><span class="logo-italics">Simply</span>&nbsp;chocolate
+                    <svg class="logo-icon" width="24" height="24" >
+                        <use href="./img/svg/sprite.svg#icon-logo" aria-label="chocolate logo"></use>
+                    </svg>
+                </a>
                 <ul class="nav-list">
                     <li class="nav-list-item">
                         <a class="nav-link" href="./index.html">Home</a>
@@ -29,6 +33,22 @@
                     </li>
                 </ul>
             </nav>
+            <ul class="social-list">
+                <li class="social-list-item">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <svg class="social-list-icon" width="24" height="24">
+                            <use href="./img/svg/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social-list-item">
+                    <a href="https://www.instagram.com" target="_blank">
+                        <svg class="social-list-icon" width="24" height="24">
+                            <use href="./img/svg/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
     <main>
@@ -38,7 +58,13 @@
                 <div class="links-flexbox">
                     <button class="btn" type="button">Buy now</button>
                     <a class="hero-link btn-dark" href="">How it’s made</a>
-                    <a class="hero-scroll" href="#benefits">scroll down</a>
+                    <a class="hero-scroll" href="#benefits">scroll down
+                        <span class="scroll-icon">
+                            <svg width="22" height="22">
+                                <use href="./img/svg/sprite.svg#icon-scroll"></use>
+                            </svg>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
